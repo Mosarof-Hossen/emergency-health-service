@@ -28,15 +28,39 @@ const callNowBtn = (name, number) => {
     alert("Not enough coins to make a call!");
     return;
   }
-  coinCount-=20;
-  document.getElementById("coin-count").innerText=coinCount;
-  alert(`calling ${name} ${number}`)
-  callHistory.push({name,number})
+  coinCount -= 20;
+  document.getElementById("coin-count").innerText = coinCount;
+  alert(`calling ${name} ${number}`);
+  callHistory.push({ name, number, time: new Date().toLocaleTimeString() });
+  showHistory();
 };
-
 
 // call history function
 
-const showHistory=()=>{
+const showHistory = () => {
+  const historyContainer = document.getElementById("all-history");
+  historyContainer.innerHTML = "";
+  callHistory.forEach((item) => {
+    const div = document.createElement("div");
+    div.innerHTML = `
+    <div class="flex justify-between items-center p-4 rounded-2xl bg-gray-50 ">
+        <div>
+        <h1 class="text-lg font-semibold">${item.name}</H1>
+        <h1>${item.number}</H1>
+        </div>
+        <div>
+        <h1>${item.time} </h1?
+        </div>
+      </div>
+    
+    `;
+    historyContainer.append(div);
+  });
+};
 
-}
+// clear container function
+
+const clearContainer = () => {
+  document.getElementById("all-history").innerHTML = "";
+  callHistory.innerText=""
+};

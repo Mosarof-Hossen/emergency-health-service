@@ -117,7 +117,7 @@
       <section class="max-w-[1800px] mx-auto py-20">
         <div class="md:flex gap-10 w-full">
           <div class="left-side md:w-3/4 min-h-[100px]">
-            <div class="grid grid-cols-1 md:grid-cols-3 w-full gap-14">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-14">
               <!-- card-1 -->
 
               <div class="bg-white p-8 rounded-2xl">
@@ -209,7 +209,7 @@
                   >
                     <i class="fa-regular fa-copy"></i> copy
                   </button>
-                  <button onclick="callNowBtn('Fire SErvice','999')"
+                  <button onclick="callNowBtn('Fire Service','999')"
                     class="bg-green-600 hover:bg-gray-400 transition-colors duration-700 px-14 py-2 rounded-xl text-white"
                   >
                     <i class="fa-solid fa-phone"></i> call
@@ -403,12 +403,12 @@
                 </button>
                 <div class="flex justify-between mt-4">
                   <button onclick="copyBtn('999')"
-                    class="border-1 text-black border-gray-400 px-14 py-2 rounded-xl hover:bg-black hover:text-white"
+                    class="border-1 text-black border-gray-400 px-2 md:px-4 lg:px-14 py-2 rounded-xl hover:bg-black hover:text-white"
                   >
                     <i class="fa-regular fa-copy"></i> copy
                   </button>
                   <button onclick="callNowBtn('Bangladesh-Railway','163')"
-                    class="bg-green-600 hover:bg-gray-400 transition-colors duration-700 px-14 py-2 rounded-xl text-white"
+                    class="bg-green-600 hover:bg-gray-400 transition-colors duration-700 px-6 md:px-4 lg:px-14 py-2 rounded-xl text-white"
                   >
                     <i class="fa-solid fa-phone"></i> call
                   </button>
@@ -422,20 +422,18 @@
           </div>
 
           <!-- history-cash-delete section -->
-          <div class="w-full inline right-side max-w-1/4 min-h-[100px]">
-            <div
-              class="flex mt-6 justify-between items-center bg-white p-10 rounded-2xl"
-            >
+          <div class="w-full bg-white p-10 rounded-3xl inline right-side max-w-1/4 min-h-[100px]">
+            <div class="flex mt-6 justify-between items-center bg-white  rounded-2xl">
               <h1 class="text-xl">
                 <i class="fa-regular fa-clock mr-2"></i>Call History
               </h1>
-              <button id="clear-list"
-                class="bg-green-600 text-white px-8 py-2 rounded-full text-xl"
-              >
+              <button onclick="clearContainer()" id="clear-list" class="bg-green-600 text-white px-8 py-2 rounded-full text-xl">
                 Clear
               </button>
             </div>
-            <div class="mt-4 space-y-3" id="all-history"></div>
+            <div class="mt-4 space-y-3" id="all-history">
+              
+            </div>
           </div>
         </div>
       </section>
