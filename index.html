@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <!-- tailwind cdn link -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -53,7 +54,7 @@
           <div
             class="flex w-[110px] bg-green-100 justify-center py-2 rounded-full items-center"
           >
-            <h1
+            <h1 
               id="love"
               class="mr-2 font-hindMadurai font-bold text-sm md:text-base"
             >
@@ -126,7 +127,7 @@
                     class="max-w-[60px] bg-red-100 p-4 rounded-xl"
                     alt="emergency-image"
                   />
-                  <i  onclick="document.getElementById('love').textContent = ' ' + (parseInt(document.getElementById('love').textContent.replace(' ', '')) + 1)"  class="fa-regular fa-heart text-4xl"></i>
+                  <i onclick="wishList(this)" class="fa-regular fa-heart text-4xl"></i>
                 </div>
                 <h1 class="font-hindMadurai font-bold text-xl mt-4">
                   জাতীয় জরুরি সেবা
@@ -137,7 +138,7 @@
                   সার্বজনীন
                 </button>
                 <div class="flex justify-between mt-4">
-                  <button
+                  <button onclick="copyBtn('999')"
                     class="border-1 text-black border-gray-400 px-14 py-2 rounded-xl hover:bg-black hover:text-white"
                   >
                     <i class="fa-regular fa-copy"></i> copy
@@ -159,7 +160,7 @@
                     class="max-w-[60px] bg-red-100 p-4 rounded-xl"
                     alt="emergency-image"
                   />
-                  <i  onclick="document.getElementById('love').textContent = ' ' + (parseInt(document.getElementById('love').textContent.replace(' ', '')) + 1)" class="fa-regular fa-heart text-4xl"></i>
+                  <i  onclick="wishList(this)"  class="fa-regular fa-heart text-4xl"></i>
                 </div>
                 <h1 class="font-hindMadurai font-bold text-xl mt-4">
                   পুলিশ
@@ -170,7 +171,7 @@
                   পুলিশ
                 </button>
                 <div class="flex justify-between mt-4">
-                  <button
+                  <button onclick="copyBtn('999')"
                     class="border-1 text-black border-gray-400 px-14 py-2 rounded-xl hover:bg-black hover:text-white"
                   >
                     <i class="fa-regular fa-copy"></i> copy
@@ -192,7 +193,7 @@
                     class="max-w-[60px] bg-red-100 p-4 rounded-xl"
                     alt="emergency-image"
                   />
-                  <i  onclick="document.getElementById('love').textContent = ' ' + (parseInt(document.getElementById('love').textContent.replace(' ', '')) + 1)" class="fa-regular fa-heart text-4xl"></i>
+                  <i id="hear-count" onclick="wishList(this)"  class="fa-regular fa-heart  text-4xl"></i>
                 </div>
                 <h1 class="font-hindMadurai font-bold text-xl mt-4">
                   ফায়ার সার্ভিস
@@ -225,7 +226,7 @@
                     class="max-w-[60px] bg-red-100 p-4 rounded-xl"
                     alt="emergency-image"
                   />
-                  <i  onclick="document.getElementById('love').textContent = ' ' + (parseInt(document.getElementById('love').textContent.replace(' ', '')) + 1)" class="fa-regular fa-heart text-4xl"></i>
+                  <i id="hear-count" onclick="wishList(this)"  class="fa-regular fa-heart  text-4xl"></i>
                 </div>
                 <h1 class="font-hindMadurai font-bold text-xl mt-4">
                   অ্যাম্বুলেন্স
@@ -258,7 +259,7 @@
                     class="max-w-[60px] bg-red-100 p-4 rounded-xl"
                     alt="emergency-image"
                   />
-                  <i  onclick="document.getElementById('love').textContent = ' ' + (parseInt(document.getElementById('love').textContent.replace(' ', '')) + 1)" class="fa-regular fa-heart text-4xl"></i>
+                  <i id="hear-count" onclick="wishList(this)"  class="fa-regular fa-heart  text-4xl"></i>
                 </div>
                 <h1 class="font-hindMadurai font-bold text-xl mt-4">
                   নারী ও শিশু সহায়তা
@@ -291,7 +292,7 @@
                     class="max-w-[60px] bg-red-100 p-4 rounded-xl"
                     alt="emergency-image"
                   />
-                  <i  onclick="document.getElementById('love').textContent = ' ' + (parseInt(document.getElementById('love').textContent.replace(' ', '')) + 1)" class="fa-regular fa-heart text-4xl"></i>
+                  <i id="hear-count" onclick="wishList(this)"  class="fa-regular fa-heart  text-4xl"></i>
                 </div>
                 <h1 class="font-hindMadurai font-bold text-xl mt-4">
                   দুদক
@@ -324,7 +325,7 @@
                     class="max-w-[60px] bg-red-100 p-4 rounded-xl"
                     alt="emergency-image"
                   />
-                  <i  onclick="document.getElementById('love').textContent = ' ' + (parseInt(document.getElementById('love').textContent.replace(' ', '')) + 1)" class="fa-regular fa-heart text-4xl"></i>
+                  <i id="hear-count" onclick="wishList(this)"  class="fa-regular fa-heart  text-4xl"></i>
                 </div>
                 <h1 class="font-hindMadurai font-bold text-xl mt-4">
                   বিদ্যুৎ বিভ্রাট
@@ -357,7 +358,7 @@
                     class="max-w-[60px] bg-red-100 p-4 rounded-xl"
                     alt="emergency-image"
                   />
-                  <i  onclick="document.getElementById('love').textContent = ' ' + (parseInt(document.getElementById('love').textContent.replace(' ', '')) + 1)" class="fa-regular fa-heart text-4xl"></i>
+                  <i id="hear-count" onclick="wishList(this)"  class="fa-regular fa-heart  text-4xl"></i>
                 </div>
                 <h1 class="font-hindMadurai font-bold text-xl mt-4">
                   ব্র্যাক
@@ -390,7 +391,7 @@
                     class="max-w-[60px] bg-red-100 p-4 rounded-xl"
                     alt="emergency-image"
                   />
-                  <i  onclick="document.getElementById('love').textContent = ' ' + (parseInt(document.getElementById('love').textContent.replace(' ', '')) + 1)" class="fa-regular fa-heart text-4xl"></i>
+                  <i id="hear-count" onclick="wishList(this)"  class="fa-regular fa-heart  text-4xl"></i>
                 </div>
                 <h1 class="font-hindMadurai font-bold text-xl mt-4">
                   বাংলাদেশ রেলওয়ে
